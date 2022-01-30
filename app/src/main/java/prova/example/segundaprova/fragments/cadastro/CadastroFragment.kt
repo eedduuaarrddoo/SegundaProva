@@ -7,17 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_cadastro.*
 import kotlinx.android.synthetic.main.fragment_cadastro.view.*
-import prova.example.segundaprova.Igreja
+import prova.example.segundaprova.model.Igreja
 import prova.example.segundaprova.R
+import prova.example.segundaprova.model.IgrejaVm
 
 
 class CadastroFragment : Fragment() {
-  private lateinit var cadastrovm:IgrejaVm
+  private lateinit var cadastrovm: IgrejaVm
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,7 +40,7 @@ class CadastroFragment : Fragment() {
         val fieis= fieis.text.toString()
 
 if(check(nome,endereco,descricao)){
-    val igreja= Igreja(0,nome,endereco,profeta,descricao, 100)
+    val igreja= Igreja(0,nome,endereco,profeta,descricao, 0)
     cadastrovm.cadastraIgreja(igreja)
     findNavController().navigate((R.id.action_cadastroFragment_to_homeFragment))
         }else{Toast.makeText(requireContext(),"os campos de  Nome endereço e descriçao nao pode ficar em brnaco",Toast.LENGTH_SHORT).show()}

@@ -1,7 +1,7 @@
-package prova.example.segundaprova.banco
+package prova.example.segundaprova.model
 
 import androidx.lifecycle.LiveData
-import prova.example.segundaprova.Igreja
+import prova.example.segundaprova.banco.IgrejaDao
 
 class IgrejaRepository(private val igrejaDao: IgrejaDao) {
 
@@ -9,4 +9,7 @@ class IgrejaRepository(private val igrejaDao: IgrejaDao) {
 suspend fun cadastraIgreja(igreja: Igreja){
     igrejaDao.cadastraIgreja(igreja)
 }
+    suspend fun updateIgreja(igreja: Igreja){
+        igrejaDao.updateIgreja(igreja)
+    }
 }

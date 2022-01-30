@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import prova.example.segundaprova.Igreja
+import prova.example.segundaprova.model.Igreja
 
 @Database(entities = [Igreja::class],version=1, exportSchema = false)
 abstract class IgrejaDataBase:RoomDatabase() {
