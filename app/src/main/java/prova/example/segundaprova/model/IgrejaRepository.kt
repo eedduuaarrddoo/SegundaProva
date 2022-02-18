@@ -12,4 +12,5 @@ suspend fun cadastraIgreja(igreja: Igreja){
     suspend fun updateIgreja(igreja: Igreja){
         igrejaDao.updateIgreja(igreja)
     }
+
 }

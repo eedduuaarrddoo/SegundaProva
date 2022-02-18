@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.item_igreja.view.*
 import prova.example.segundaprova.model.Igreja
 import prova.example.segundaprova.R
 import prova.example.segundaprova.fragments.listar.HomeFragmentDirections
+import prova.example.segundaprova.model.Post
 
 class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     private var listIgreja= emptyList<Igreja>()
@@ -42,4 +43,6 @@ val action=HomeFragmentDirections.actionHomeFragmentToUpdateFragment(itemAtual)
     this.listIgreja=igreja
         notifyDataSetChanged()
     }
+
+
 }
